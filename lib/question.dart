@@ -60,7 +60,7 @@ class QuestionWidget extends StatelessWidget {
           });
     } else {
       if (selected == '') {
-        return FlatButton(child: Text('Подати'), onPressed: null);
+        return FlatButton(child: Text('Перевірити'), onPressed: null);
       } else {
         return RaisedButton(
             child: Text('Перевірити'),
