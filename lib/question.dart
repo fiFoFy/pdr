@@ -81,7 +81,7 @@ class QuestionWidget extends StatelessWidget {
 
     Color color = submitted
         ? question.correct == id ? Colors.green : Colors.red
-        : Colors.black;
+        : Colors.transparent; // Colors.black;
 
     return Container(
         decoration: BoxDecoration(
