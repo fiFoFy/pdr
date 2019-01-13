@@ -41,3 +41,6 @@ android/app/src/AndroidManifest.xml
 ios/Runner/info.plist
 <key>CFBundleName</key>
 <string>pdr</string>
+
+
+100mb apk limit - download page
