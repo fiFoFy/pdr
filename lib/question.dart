@@ -63,7 +63,7 @@ class QuestionWidget extends StatelessWidget {
         return FlatButton(child: Text('Подати'), onPressed: null);
       } else {
         return RaisedButton(
-            child: Text('Подати'),
+            child: Text('Перевірити'),
             color: Theme.of(context).primaryColor,
             onPressed: () {
               submit();
