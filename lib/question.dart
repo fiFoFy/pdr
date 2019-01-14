@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+//import 'package:cached_network_image/cached_network_image.dart';
 
 class Answer {
   final String id;
@@ -122,16 +122,20 @@ class QuestionWidget extends StatelessWidget {
 
     if (question.image != null && question.image.indexOf('no_image') == -1) {
       // children.insert(0, ListTile(title: Image.asset('assets/images/' + question.image.split('/').last)));
-      String src = 'https://rawcdn.githack.com/mac2000/pdr/master/assets/images/' + question.image.split('/').last;
-      children.insert(0, ListTile(title: CachedNetworkImage(
-        imageUrl: src,
-        placeholder: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[new CircularProgressIndicator()],
-        ),
-        errorWidget: new Icon(Icons.error),
-      )));
+       children.insert(0, ListTile(title: Image.asset('assets/questions/' + question.image.split('/').last)));
+
+       //import 'package:cached_network_image/cached_network_image.dart';
+
+//      String src = 'https://rawcdn.githack.com/mac2000/pdr/master/assets/images/' + question.image.split('/').last;
+//      children.insert(0, ListTile(title: CachedNetworkImage(
+//        imageUrl: src,
+//        placeholder: Row(
+//          mainAxisSize: MainAxisSize.max,
+//          mainAxisAlignment: MainAxisAlignment.center,
+//          children: <Widget>[new CircularProgressIndicator()],
+//        ),
+//        errorWidget: new Icon(Icons.error),
+//      )));
     }
 
     return Scaffold(
