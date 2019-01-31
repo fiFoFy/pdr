@@ -14,16 +14,6 @@ flutter packages pub run flutter_launcher_icons:main
 
 TODO:
 
-android/app/src/AndroidManifest.xml
-
-<application
-android:name="io.flutter.app.FlutterApplication"
-android:label="pdr"
-
-ios/Runner/info.plist
-<key>CFBundleName</key>
-<string>pdr</string>
-
 # Resize images trick
 
 ```bash
