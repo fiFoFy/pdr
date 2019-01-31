@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 //import 'package:cached_network_image/cached_network_image.dart';
 
 class Answer {
@@ -138,10 +139,39 @@ class QuestionWidget extends StatelessWidget {
 //      )));
     }
 
+//    children.insert(0, ListTile(
+//      title: Text('Большой апдейт'),
+//      subtitle: Text('Привет мир'),
+//    ));
+
+    children.insert(0, new Container (
+       padding: EdgeInsets.only(left: 0.0, right: 0.0, top: 8.0, bottom: 8.0),
+        margin: EdgeInsets.only(bottom: 16.0, left: 16.0, right: 16.0),
+        decoration: new BoxDecoration (
+            color: Colors.orangeAccent
+        ),
+        child: new ListTile (
+          onTap: _launchURL,
+          trailing: const Icon(Icons.warning),
+          title: Text('Вопросы с картиками временно не доступны'),
+          subtitle: new Container(
+            padding: EdgeInsets.only(top: 8.0),
+            child: Text('Подробности и планы', style: TextStyle(color: Colors.blue),)
+          ),
+        )
+    ));
+
     return Scaffold(
         appBar: AppBar(title: Text('Тести ПДР України')),
         body: ListView(children: children, padding: EdgeInsets.only(top: 12.0)),
         bottomNavigationBar:
             BottomAppBar(child: ListTile(title: _button(context))));
+  }
+
+  _launchURL() async {
+    final url = 'https://github.com/mac2000/pdr/blob/master/README.md';
+    if (await canLaunch(url)) {
+      await launch(url);
+    }
   }
 }

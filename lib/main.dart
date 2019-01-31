@@ -32,7 +32,10 @@ class _MyAppState extends State<MyApp> {
     final data = json.decode(text) as Map<String, dynamic>;
 
     setState(() {
-      questions = data.values.map((dynamic json) => Question.fromJson(json)).toList();
+      questions = data.values
+          .map((dynamic json) => Question.fromJson(json))
+          .where((Question question) => question.image.indexOf('no_image') != -1)
+          .toList();
       question = questions[_random.nextInt(questions.length)];
     });
   }
