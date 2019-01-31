@@ -156,7 +156,7 @@ class QuestionWidget extends StatelessWidget {
           title: Text('Вопросы с картиками временно не доступны'),
           subtitle: new Container(
             padding: EdgeInsets.only(top: 8.0),
-            child: Text('Подробности и планы', style: TextStyle(color: Colors.blue),)
+            child: Text('По просьбе правообладателя вопросы с изображениями убраны из приложения. Приносим извинения за временные неудобства. Ожидайте новую версию приложения, иллюстрации в разработке.')
           ),
         )
     ));
