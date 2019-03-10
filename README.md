@@ -27,6 +27,29 @@ brew install imagemagick
 flutter build apk
 ```
 
+APK located at: `build/app/outputs/apk/release/app-release.apk`
+
+# Release
+
+Change version in `pubspec.yaml`
+
+`version: 1.3.0+4` -> `version: 1.3.0+5` e.g. increment last number without it google wont allow you to upload apk complying it already have this version
+
+## Google
+
+[Go to](https://play.google.com/apps/publish/?account=6448344011839007794#ManageReleasesPlace:p=ua.net.marchenko.pdr&appid=4972343131826316274) Release management \ App releases and click on manage link in production track
+
+In production releases window click on "Create release" button
+
+Tap on "Browse files" button and choose apk
+
+## Apple
+
+[docs](https://flutter.dev/docs/deployment/ios)
+
+
+
+
 open source questions and images
 
 
@@ -54,3 +77,8 @@ export PATH=$PATH:~/src/github.com/flutter/flutter/bin
 ## Keys
 
 Put key.properties and key.jks to android directory
+
+
+# Privacy policy
+
+[WebsitePolicies](https://www.websitepolicies.com/policies/manage)
