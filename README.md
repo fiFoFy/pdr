@@ -46,3 +46,7 @@ brew install dart
 git clone https://github.com/flutter/flutter
 export PATH=$PATH:~/src/github.com/flutter/flutter/bin
 ```
+
+## Keys
+
+Put key.properties and key.jks to android directory
