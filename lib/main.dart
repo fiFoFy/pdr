@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:pdr/question.dart';
@@ -28,14 +29,25 @@ class _MyAppState extends State<MyApp> {
   }
 
   void load() async {
+    final questionsText = await DefaultAssetBundle.of(context).loadString('assets/questions.json');
+    final questionsList = json.decode(questionsText) as List<dynamic>;
+
     final text = await DefaultAssetBundle.of(context).loadString('assets/data.json');
     final data = json.decode(text) as Map<String, dynamic>;
 
     setState(() {
+
+      // Questions without images
+      // questions = data.values
+      //     .map((dynamic json) => Question.fromJson(json))
+      //     .where((Question question) => question.image.indexOf('no_image') != -1)
+      //     .toList();
+
       questions = data.values
           .map((dynamic json) => Question.fromJson(json))
-          .where((Question question) => question.image.indexOf('no_image') != -1)
+          .where((Question question) => question.image.indexOf('no_image') != -1 || questionsList.indexOf(question.image.split('/').last) != -1)
           .toList();
+
       question = questions[_random.nextInt(questions.length)];
     });
   }

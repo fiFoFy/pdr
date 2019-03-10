@@ -144,6 +144,7 @@ class QuestionWidget extends StatelessWidget {
 //      subtitle: Text('Привет мир'),
 //    ));
 
+    /*
     children.insert(0, new Container (
        padding: EdgeInsets.only(left: 0.0, right: 0.0, top: 8.0, bottom: 8.0),
         margin: EdgeInsets.only(bottom: 16.0, left: 16.0, right: 16.0),
@@ -160,6 +161,7 @@ class QuestionWidget extends StatelessWidget {
           ),
         )
     ));
+    */
 
     return Scaffold(
         appBar: AppBar(title: Text('Тести ПДР України')),
