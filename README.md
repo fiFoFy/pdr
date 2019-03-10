@@ -47,9 +47,9 @@ Tap on "Browse files" button and choose apk
 
 ## Apple
 
-[docs](https://flutter.dev/docs/deployment/ios)
-
-
+- [docs](https://flutter.dev/docs/deployment/ios)
+- [my apps](https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/app)
+- [app ids](https://developer.apple.com/account/ios/identifier/bundle)
 
 
 open source questions and images
