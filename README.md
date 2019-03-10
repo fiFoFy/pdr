@@ -25,9 +25,11 @@ brew install imagemagick
 
 ```bash
 flutter build apk
+flutter build ios
 ```
 
 APK located at: `build/app/outputs/apk/release/app-release.apk`
+APP located at: `build/ios/iphoneos/Runner.app`
 
 # Release
 
