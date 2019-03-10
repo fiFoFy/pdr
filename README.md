@@ -21,7 +21,11 @@ brew install imagemagick
 ./resize.sh
 ```
 
+# Build 
+
+```bash
 flutter build apk
+```
 
 open source questions and images
 
