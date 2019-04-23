@@ -14,6 +14,11 @@ flutter packages pub run flutter_launcher_icons:main
 
 TODO:
 
+# Images
+
+assets/questions - self made images
+assets/images - original images
+
 # Resize images trick
 
 ```bash
@@ -21,11 +26,11 @@ brew install imagemagick
 ./resize.sh
 ```
 
-# Build 
+# Build
 
 ```bash
 flutter build apk
-flutter build ios
+flutter build ios --release
 ```
 
 APK located at: `build/app/outputs/apk/release/app-release.apk`
@@ -51,12 +56,15 @@ Tap on "Browse files" button and choose apk
 - [my apps](https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/app)
 - [app ids](https://developer.apple.com/account/ios/identifier/bundle)
 
+```
+open ios/Runner.xcworkspace
+```
+
+menu Product \ Archive \ Distribute App
 
 open source questions and images
 
-
 codemagic.io
-
 
 python -c 'import os, json; print json.dumps(os.listdir("assets/questions"))' > assets/questions.json
 
@@ -79,7 +87,6 @@ export PATH=$PATH:~/src/github.com/flutter/flutter/bin
 ## Keys
 
 Put key.properties and key.jks to android directory
-
 
 # Privacy policy
 

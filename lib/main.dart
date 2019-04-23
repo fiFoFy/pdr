@@ -48,6 +48,7 @@ class _MyAppState extends State<MyApp> {
           .where((Question question) => question.image.indexOf('no_image') != -1 || questionsList.indexOf(question.image.split('/').last) != -1)
           .toList();
 
+      // print(questions.length);
       question = questions[_random.nextInt(questions.length)];
     });
   }
